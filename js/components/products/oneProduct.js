@@ -1,4 +1,4 @@
-import {baseUrl, productsUrl} from "../../constants/api.js"
+import {productsUrl} from "../../constants/api.js"
 import { addToCart } from "../../utils/cart/addToCart.js";
 // import displayMessage from "../displayMessage.js";
 const title = document.querySelector("title");
