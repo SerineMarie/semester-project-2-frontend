@@ -13,6 +13,7 @@ export async function oneProduct(){
     try{ 
         const rep = await fetch(oneProductUrl)
         const json = await rep.json();
+        console.log(json)
         const productImg = productsUrl + json.image.formats.medium.url;
         const productImgSmall = productsUrl + json.image.formats.thumbnail.url;
         title.innerHTML = `${json.title}`;
