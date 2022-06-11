@@ -1,3 +1,3 @@
-export const baseUrl = "http://localhost:1337"
-export const productsUrl = "http://localhost:1337/products";
-export const heroBannerUrl = "http://localhost:1337/home";
+export const baseUrl = "https://semester-project-2-serinemarie.herokuapp.com"
+export const productsUrl = "https://semester-project-2-serinemarie.herokuapp.com/products";
+export const heroBannerUrl = "https://semester-project-2-serinemarie.herokuapp.com/home";
