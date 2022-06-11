@@ -14,8 +14,8 @@ export async function oneProduct(){
         const rep = await fetch(oneProductUrl)
         const json = await rep.json();
         console.log(json)
-        const productImg = "https://semester-project-2-serinemarie.herokuapp.com/products" + json.image.formats.small.url;
-        const productImgSmall = "https://semester-project-2-serinemarie.herokuapp.com/products" + json.image.formats.thumbnail.url;
+        const productImg = "https://semester-project-2-serinemarie.herokuapp.com/uploads" + json.image.formats.medium.url;
+        const productImgSmall = "https://semester-project-2-serinemarie.herokuapp.com/uploads" + json.image.formats.thumbnail.url;
 
         // const productImgSmall = productsUrl + json.image.formats.thumbnail.url;
         title.innerHTML = `${json.title}`;
