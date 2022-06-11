@@ -1,4 +1,4 @@
-# semester-project-2-fronten# Semester Project 2
+# Semester Project 2
 
 This project was done to show what we have learned during our third semester. We were to create an e-commerce website with both customer-facing and admin sections. We were given an Strapi API to fetch our content from.
 
