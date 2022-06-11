@@ -7,8 +7,8 @@ export async function heroBanner(){
     try{
         const rep = await fetch(heroBannerUrl);
         const data = await rep.json();
-        const heroBannerImg = "https://semester-project-2-serinemarie.herokuapp.com/home" + data.hero_banner.url;
-        const heroBannerResponsive = "https://semester-project-2-serinemarie.herokuapp.com/home" + data.hero_banner.url;        
+        const heroBannerImg = "https://semester-project-2-serinemarie.herokuapp.com" + data.hero_banner.url;
+        const heroBannerResponsive = "https://semester-project-2-serinemarie.herokuapp.com" + data.hero_banner.url;        
 
         bannerContainer.innerHTML += `<div class="banner_container-img" style="background-image: url('${heroBannerImg}');"></div>
                                         <div class="banner_container-responsive-img"><img src="${heroBannerResponsive}"/></div>`
