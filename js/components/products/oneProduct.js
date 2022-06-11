@@ -14,8 +14,10 @@ export async function oneProduct(){
         const rep = await fetch(oneProductUrl)
         const json = await rep.json();
         console.log(json)
-        const productImg = productsUrl + json.image.formats.medium.url;
-        const productImgSmall = productsUrl + json.image.formats.thumbnail.url;
+        const productImg = "https://semester-project-2-serinemarie.herokuapp.com/products" + "/" + json.image.formats.medium.url;
+        const productImgSmall = "https://semester-project-2-serinemarie.herokuapp.com/products" + "/" + json.image.formats.thumbnail.url;
+
+        // const productImgSmall = productsUrl + json.image.formats.thumbnail.url;
         title.innerHTML = `${json.title}`;
         productContainer.innerHTML += `<div class="card_one">
                                             <div class="card_one_top-img" style="background-image: url('${productImg}');"></div>
