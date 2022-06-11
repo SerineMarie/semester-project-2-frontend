@@ -1,4 +1,4 @@
-import {baseUrl} from "../../constants/api.js"
+import {baseUrl, productsUrl} from "../../constants/api.js"
 import { addToCart } from "../../utils/cart/addToCart.js";
 // import displayMessage from "../displayMessage.js";
 const title = document.querySelector("title");
@@ -7,14 +7,14 @@ const productContainer = document.querySelector(".product")
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const oneProductUrl = "http://localhost:1337/products/" + id;
+const oneProductUrl = productsUrl + "/" + id;
 
 export async function oneProduct(){
     try{ 
         const rep = await fetch(oneProductUrl)
         const json = await rep.json();
-        const productImg = baseUrl + json.image.formats.medium.url;
-        const productImgSmall = baseUrl + json.image.formats.thumbnail.url;
+        const productImg = productsUrl + json.image.formats.medium.url;
+        const productImgSmall = productsUrl + json.image.formats.thumbnail.url;
         title.innerHTML = `${json.title}`;
         productContainer.innerHTML += `<div class="card_one">
                                             <div class="card_one_top-img" style="background-image: url('${productImg}');"></div>
